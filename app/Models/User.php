@@ -22,6 +22,8 @@ class User extends Authenticatable
         'email',
         'password',
         'role', // Yeni eklenen alan
+        'company_name',
+        'role'
     ];
 
     /**
@@ -47,7 +49,8 @@ class User extends Authenticatable
         ];
     }
 
-    public function isAdmin(): bool {
+    public function isAdmin(): bool
+    {
         return $this->role === 'admin';
     }
 }
